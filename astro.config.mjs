@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
+import glsl from 'vite-plugin-glsl';
 import { siteConfig } from './src/config';
 
 const { siteUrl } = siteConfig;
@@ -16,5 +17,6 @@ export default defineConfig({
         },
       },
     },
+    plugins: [glsl()],
   },
 });
